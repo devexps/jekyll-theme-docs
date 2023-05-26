@@ -17,6 +17,10 @@
     <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
     {% endif %}
+    {% if site.google_verify %}
+    <meta name="google-site-verification" content="{{ site.google_verify }}" />
+    {% endif %}
+    {% include analytics.html %}
   </head>
 
   <body>
