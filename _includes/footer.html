@@ -8,10 +8,15 @@
 {%- endif -%}
 {%- endcapture -%}
 <footer class="chrome:footer">
+  {%- if site.version != false and version != "" -%}
+  <div class="chrome:footer_item">
+    <span class="text-lg">{{ version }}</span>
+  </div>
+  {%- endif -%}
   {%- if site.github.repository_url -%}
   <div class="chrome:footer_item" title="GitHub Repository">
     <a href="{{ site.github.repository_url }}" target="_blank" rel="noreferrer noopener">
-      <img src="{{ '/assets/images/GitHub-Mark.svg' | relative_url }}" alt="Link to GitHub Repository">
+      <img width="32px" height="32px" src="{{ '/assets/images/GitHub-Mark.svg' | relative_url }}" alt="Link to GitHub Repository">
     </a>
   </div>
   {%- endif -%}
